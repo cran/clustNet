@@ -1,3 +1,4 @@
-# clustNet 1.0.1
+# clustNet 1.1.0
 
-* Added a `NEWS.md` file to track changes to the package.
+* Added classification function
+* Added color specification option for density plot
