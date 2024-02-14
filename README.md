@@ -8,12 +8,21 @@ clustNet: Network-based clustering with covariate adjustment
 Installation
 -----------
 
+The package requires `Rgraphviz` and `RBGL`, which can be installed from Bioconductor as follows:
+
+```{r eval=FALSE}
+if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+BiocManager::install(c("Rgraphviz", "RBGL"))
+```
+
 The latest stable version of clustNet is available on CRAN and can be installed with
 
 ```{r eval=FALSE}
 install.packages("clustNet")
 ```
-from within an R session.
+from within an R session. On a normal computer, this should take around 5-60 seconds, depending on how many of the required packages are already installed.
+
+BiocManager::install("remotes")
 
 Being hosted on GitHub, it is also possible to use the `install_github` tool from an R session to install the latest development version:
 
@@ -59,3 +68,5 @@ library(stats)
 density_plot(cluster_results)
 
 ```
+
+On a normal computer, the clustering should take around 2-4 minutes.

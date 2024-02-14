@@ -1,7 +1,7 @@
 Package: clustNet
 Type: Package
 Title: Network-Based Clustering
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: 
   c(person(given = "Fritz",
            family = "Bayer",
@@ -22,9 +22,9 @@ Imports: BiDAG (>= 2.0.2), pcalg, RBGL, parallel, clue, methods, graph,
         igraph
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2023-09-27 09:14:33 UTC; frbayer
+Packaged: 2024-02-14 12:23:00 UTC; frbayer
 Author: Fritz Bayer [aut, cre, cph],
   Jack Kuipers [ctb]
 Maintainer: Fritz Bayer <frbayer@ethz.ch>
 Repository: CRAN
-Date/Publication: 2023-09-27 09:30:02 UTC
+Date/Publication: 2024-02-14 15:20:02 UTC

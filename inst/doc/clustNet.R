@@ -1,25 +1,7 @@
----
-title: "Introduction: From Clustering to Density Plots"
-output: rmarkdown::html_vignette
-description: >
-  Network-based clustering of binary data. Optional adjustment for covariates. 
-vignette: >
-  %\VignetteIndexEntry{clustNet}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-```{r setup}
+## ----setup--------------------------------------------------------------------
 library(clustNet)
-```
 
-## Clustering
-
-First, we need to learn the networks. Here, we simulate data from three clusters. This process takes around two minutes on a local PC.
-
-```{r, message=FALSE, warning=FALSE, results='hide'}
+## ---- message=FALSE, warning=FALSE, results='hide'----------------------------
 library(clustNet)
 
 # Simulate data
@@ -30,14 +12,8 @@ sampled_data <- simulation_data$sampled_data
 
 # Network-based clustering
 cluster_results <- get_clusters(sampled_data, k_clust = k_clust)
-```
 
-
-## Visualization of networks
-
-We can visualize the networks as follows. 
-
-```{r}
+## -----------------------------------------------------------------------------
 
 # Load additional pacakges to visualize the networks
 library(ggplot2)
@@ -47,13 +23,8 @@ library(ggpubr)
 
 # Visualize networks
 plot_clusters(cluster_results)
-```
 
-## Visualization of networks
-
-Finally, we can create a density plot of our clustering. 
-
-```{r}
+## -----------------------------------------------------------------------------
 # Load additional pacakges to create a 2d dimensionality reduction
 library(car)
 library(ks)
@@ -62,4 +33,4 @@ library(stats)
 
 # Plot a 2d dimensionality reduction
 density_plot(cluster_results)
-```
+
